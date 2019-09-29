@@ -7,9 +7,17 @@
 
 	$digP = $_POST['digP'];
 
-	$sql = "SELECT * FROM presidente";
+	$sql = "SELECT numPresidente, nome, partido FROM presidente WHERE numPresidente = $digP";
 	$resultado = mysqli_query($conexao,$sql);
-	var_dump($resultado);
+	while ($linha = mysqli_fetch_array($resultado)){
+			$numPresidente = $linha['numPresidente'];
+			$nome = $linha['nome'];
+			$partido = $linha['partido'];
+			echo "$numPresidente - ";
+			echo "$nome  - ";
+			echo "$partido <br>";
+	}
+
 	//require_once 'index.php';
 
 ?>

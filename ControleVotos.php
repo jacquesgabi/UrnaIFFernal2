@@ -11,5 +11,5 @@
 	$resultado = mysqli_query($conexao,$sql);
 	var_dump($resultado);
 	//require_once 'index.php';
-	
+
 ?>

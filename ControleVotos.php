@@ -1,5 +1,5 @@
 <?php
-	include "Conexao.php";
+	
 	require_once 'Presidente.php';
 	$presidente1 = new Presidente();
 	$presidente2 = new Presidente();
